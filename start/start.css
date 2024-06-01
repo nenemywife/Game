@@ -1,0 +1,30 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+#board{
+    background-color: white;
+    border: solid;
+    position: relative;
+    right: -150px;
+}
+
+.center{
+    display:block;
+    position:absolute;
+}
+
+#G1{
+    position: relative;
+    left: -150px;
+    top: -400px;
+    font-size: 25px;
+}
+
+#G2{
+    position: relative;
+    left: -375px;
+    top: -300px;
+    font-size: 25px;
+}

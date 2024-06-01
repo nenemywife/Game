@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">  
+    <script src="https://kit.fontawesome.com/08d55996d8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="g2.css">
+    <script src="g2.js"></script>
+</head>
+<body>
+    <div class="center">
+        <canvas id="board"></canvas>
+        <a id="sta" onclick="startGame()">
+            <span id="sp">START</span>
+            <svg id="svg" width="13px" height="10px" viewbox="0 0 13 10"">
+                <path d="M1,5 L11,5"></path>
+                <polyline points="8 1 12 5 8 9" style="fill:black"></polyline>
+            </svg>
+        </a>
+    </div>
+
+    <div onclick="location.href='../index.html'" class="cta">
+        <svg width="130px" height="100px" viewbox="0 0 130 100" >
+            <path d="M1,5 L11,5"></path>
+            <polyline points="40,70 65,50 90,70"></polyline>
+            <polyline points="50,70 50,85 80,85 80,70" ></polyline>
+        </svg>
+    </div>
+
+    <div id="line1"></div>
+    <ul class="slides">
+        <input type="radio" id="control-1" name="control" checked>
+        <input type="radio" id="control-2" name="control">
+        <input type="radio" id="control-3" name="control">
+        <input type="radio" id="control-4" name="control">
+        <li class="slide">
+            <img class="slide" src="../background1.png" onclick="changeBackground1()">
+        </li>
+        <li class="slide">
+            <img class="slide" src="../background2.png" onclick="changeBackground2()">
+        </li>
+        <li class="slide">
+            <img class="slide" src="../background3.png" onclick="changeBackground3()">
+        </li>
+        <li class="slide" id="liColor">
+            <input type="color" value="#ffff7c" id="color">
+            <input type="button" onclick="changeColor()" id="changeColorButton" value="change">
+        </li>
+        <div class="controls-visible">
+            <label for="control-1"></label>
+            <label for="control-2"></label>
+            <label for="control-3"></label>
+            <label for="control-4"></label>
+        </div>
+    </ul>
+
+    <p class="back">Choose background</p>
+    <p class="back2">(Click image)<span id="changeBack">changed</span></p>
+
+    <div id="line2"></div>
+    <ul class="slidesb">
+        <input type="radio" id="controlb-1" name="controlb" checked>
+        <input type="radio" id="controlb-2" name="controlb">
+        <input type="radio" id="controlb-3" name="controlb">
+        <input type="radio" id="controlb-4" name="controlb">
+        <li class="slideb">
+            <img class="slideb" src="../soccer.png" onclick="changeBall1()">
+        </li>
+        <li class="slideb">
+            <img class="slideb" src="../basketball.png" onclick="changeBall2()">
+        </li>
+        <li class="slideb">
+            <img class="slideb" src="../poolball.png" onclick="changeBall3()">
+        </li>
+        <li class="slideb">
+            <img class="slideb" src="./ball.png" onclick="changeBall4()">
+        </li>
+        <div class="controlsb-visible">
+            <label for="controlb-1"></label>
+            <label for="controlb-2"></label>
+            <label for="controlb-3"></label>
+            <label for="controlb-4"></label>
+        </div>
+    </ul>
+
+    <p class="backb">Choose ball</p>
+    <p class="backb2">(Click image)<span id="changeBall">changed</span></p>
+
+    <h2 id="choose">Choose your favorite style</h2>
+    
+    <i class="fa-solid fa-lightbulb" id="bulb"></i>
+    <h2 id="hint">HINT</h2>
+    <div id="lineHint"></div>
+    <p id="p1">1. For upper user, press A and D to move the black board.</p>
+    <p id="p2">2. For below user, press right and <br>left key to move the black board.</p>
+    <p id="p3">3. Press space to restart.</p>
+</body>
+</html>
